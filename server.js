@@ -6,7 +6,8 @@ app.use(express.json());
 
 app.all('*', (req, res) => {
   console.log('Headers received:', req.headers);
-  res.json({ message: 'Headers logged' });
+  console.log('Body received:', req.body);
+  res.json({ message: 'Headers and body logged' });
 });
 
 app.listen(port, () => {
